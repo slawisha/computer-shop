@@ -12,7 +12,7 @@ class OrderRepository {
      */
     public function all()
     {
-        return Order::withTrashed()->get();
+        return Order::withTrashed()->paginate(15);
     }
 
     /**

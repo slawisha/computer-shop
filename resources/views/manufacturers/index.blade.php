@@ -7,8 +7,11 @@
             <div class="col-md-8 col-md-offset-1">
                 @include('flash::message')
             </div>
-            <h2 class="col-md-offset-1"><i class="fa fa-wrench"></i> Manufacturers</h2>
-            <a href="{{ route('admin.manufacturer.create') }}" class="col-md-offset-1">Create new Manufacturer</a>
+            <div class="col-md-8 col-md-offset-1">
+                <h2><i class="fa fa-wrench"></i> Manufacturers</h2>
+                <a href="{{ route('admin.manufacturer.create') }}">Create new Manufacturer</a>
+            </div>
+
             <table class="table table-bordered col-md-offset-1">
                 <tr class="active"><th>Name</th><th>Action</th></tr>
                 @foreach($manufacturers as $manufacturer)
@@ -23,6 +26,7 @@
                     </tr>
                 @endforeach
             </table>
+            <span class="col-md-offset-1">{!! $manufacturers->render() !!}</span>
         </div>
     </div>
 @stop

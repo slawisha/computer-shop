@@ -21,6 +21,8 @@
                     </tr>
                 @endforeach
             </table>
+            <span class="col-md-offset-1">{!! $products->render() !!}</span>
+
         </div>
     </div>
 @stop

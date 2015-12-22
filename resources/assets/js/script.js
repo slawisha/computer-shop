@@ -13,10 +13,15 @@
 
         $.post('/cart', data, function(response){
             console.log(response);
-            alert('Product ' + response[0] + ' added to Cart');
+            $('.navbar').prepend('<div class="alert alert-success text-center"><b>'  + response[2] + '</b>   added to Cart</div>');
+
             //number of items
             $('.cart-items-number').html('(' + response[1] + ')');
-        });
 
+            $('.alert').delay(3000).fadeOut(500);
+        });
     });
+
+    $('.alert').delay(3000).fadeOut(500);
+
 })(jQuery);

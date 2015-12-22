@@ -9,7 +9,9 @@
             <div class="col-md-8 col-md-offset-4">
                 @include('flash::message')
             </div>
-            <h2 class="col-md-offset-1"><i class="fa fa-truck"></i> Orders</h2>
+            <div class="col-md-8 col-md-offset-1">
+                <h2><i class="fa fa-truck"></i> Orders</h2>
+            </div>
             <table class="table table-bordered col-md-offset-1">
                 <tr class="active">
                     <th>Number</th>
@@ -39,6 +41,7 @@
                     </tr>
                 @endforeach
             </table>
+            <span class="col-md-offset-1">{!! $orders->render() !!}</span>
         </div>
     </div>
 @stop()

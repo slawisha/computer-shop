@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 
 
 use App\Http\Requests\CartRequest;
+use App\Product;
+use App\Repositories\ProductRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -40,7 +42,7 @@ class CartController extends Controller {
      * @param Request $request
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function add(Request $request)
+    public function add(Request $request, ProductRepository $productRepository)
     {
         if($request->ajax())
         {
@@ -48,9 +50,11 @@ class CartController extends Controller {
 
             $request->session()->push('products', $productId);
 
+            $productName = $productRepository->findById($productId)->name;
+
             $numberOfProducts = count($request->session()->get('products'));
 
-            return response()->json([$productId,$numberOfProducts]);
+            return response()->json([$productId,$numberOfProducts, $productName]);
         }
     }
 

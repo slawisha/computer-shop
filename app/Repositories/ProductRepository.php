@@ -24,7 +24,7 @@ class ProductRepository {
 
     public function findByCategory($categoryId)
     {
-        return Product::where('category_id',$categoryId)->get();
+        return Product::where('category_id',$categoryId)->paginate(5);
     }
 
     /**
@@ -34,7 +34,7 @@ class ProductRepository {
      */
     public function all()
     {
-        return Product::all();
+        return Product::paginate(5);
     }
 
     /**

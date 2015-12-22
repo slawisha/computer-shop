@@ -26,7 +26,7 @@ class CategoryRepository {
      */
     public function all()
     {
-        return Category::with('products')->get();
+        return Category::with('products')->paginate(10);
     }
 
     /**

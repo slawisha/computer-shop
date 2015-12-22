@@ -14,7 +14,7 @@ class ManufacturerRepository {
      */
     public function all()
     {
-        return Manufacturer::all();
+        return Manufacturer::paginate(10);
     }
 
     public function findById($id)
