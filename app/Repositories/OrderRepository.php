@@ -34,7 +34,7 @@ class OrderRepository {
      */
     public function getUsersOrders($userId)
     {
-        return Order::withTrashed()->where('user_id', $userId)->get();
+        return Order::withTrashed()->where('user_id', $userId)->paginate(15);
     }
 
     /**

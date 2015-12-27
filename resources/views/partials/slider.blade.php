@@ -21,9 +21,11 @@
                         @foreach($products->take(3) as $product)
                         <div class="col-sm-4">
                             <div class="col-item">
+                                @if(!$product->images->isEmpty())
                                 <div class="photo">
                                     <img src="{{asset($product->images()->first()->url)}}" class="img-responsive" alt="{{ $product->id }}" />
                                 </div>
+                                @endif
                                 <div class="info">
                                     <div class="row">
                                         <div class="price col-md-6">
@@ -57,9 +59,11 @@
                         @foreach($products->slice(2,3) as $product)
                         <div class="col-sm-4">
                             <div class="col-item">
+                                @if(!$product->images->isEmpty())
                                 <div class="photo">
                                     <img src="{{asset($product->images()->first()->url)}}" class="img-responsive" alt="{{ $product->id }}" />
                                 </div>
+                                @endif
                                 <div class="info">
                                     <div class="row">
                                         <div class="price col-md-6">

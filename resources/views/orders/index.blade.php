@@ -12,6 +12,7 @@
             <div class="col-md-8 col-md-offset-1">
                 <h2><i class="fa fa-truck"></i> Orders</h2>
             </div>
+            @if(!$orders->isEmpty())
             <table class="table table-bordered col-md-offset-1">
                 <tr class="active">
                     <th>Number</th>
@@ -22,6 +23,7 @@
                     @endif
                 </tr>
                 @foreach($orders as $order)
+                    @if($order->user)
                     <tr><td>{!!link_to_action('OrderController@show',$order->number,$order->id,[]) !!}</td>
                         <td>
                             @if($order->deleted_at)
@@ -39,9 +41,15 @@
                             </td>
                         @endif
                     </tr>
+                    @endif
                 @endforeach
             </table>
             <span class="col-md-offset-1">{!! $orders->render() !!}</span>
+                @else
+                    <div class="col-md-8 col-md-offset-1">
+                        <h3>No orders yet</h3>
+                    </div>
+                @endif
         </div>
     </div>
 @stop()

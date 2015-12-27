@@ -1,23 +1,20 @@
-## Laravel PHP Framework
+# L5 Shop
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/downloads.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+Web computer shop built in [Laravel 5](http://laravel.com), including Excel spreadsheet import and Stripe payment.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+## Excel spreadsheet import
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+Excel spreadsheet has following columns: id, Name, Manufacturer, Model, Category, Price, Processor, Memory, HDD, Graphics, Screen, Optical. Example file can be found inside the repository.
 
-## Official Documentation
+## Stripe payment
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+use testing card 4242 4242 4242 4242
 
-## Contributing
+## Local Instalation
+Clone the repo and cd into the directory, then run composer install form the command line. The App uses sqlite in development enviroment.
+Run inside homestead enviroment.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+Admin credentials
 
-### License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+	admin@l5shop.com
+	123456

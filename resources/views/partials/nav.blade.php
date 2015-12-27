@@ -39,7 +39,6 @@
                                 <li><a href="{{ url('/admin/import') }}">Dashboard</a></li>
                                 <li><a href="{{ url('/admin/order') }}">Orders</a></li>
                             @else
-                                <li><a href="{{ url('/profile') }}">Profile</a></li>
                                 <li><a href="{{ url('/order') }}">Orders</a></li>
                             @endif
                             <li><a href="{{ url('/auth/logout') }}">Logout</a></li>

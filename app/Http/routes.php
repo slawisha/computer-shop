@@ -21,6 +21,8 @@ Route::resource('category.products','CategoryProductController', ['only' => 'ind
 
 Route::group(['prefix' => 'admin','middleware' => 'admin'],  function ()
 {
+    Route::get('user', ['as'=> 'admin.user.index', 'uses' => 'UserController@index']);
+    Route::delete('user/{id}', 'UserController@destroy');
     Route::get('import', ['as'=> 'admin.import', 'uses' => 'ImportController@index']);
     Route::post('import', 'ImportController@store');
     Route::resource('category', 'CategoryController');
