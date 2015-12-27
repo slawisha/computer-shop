@@ -1,4 +1,4 @@
-# L5 Shop
+# L5 Computer Shop
 
 Web computer shop built in [Laravel 5](http://laravel.com), including Excel spreadsheet import and Stripe payment.
 
