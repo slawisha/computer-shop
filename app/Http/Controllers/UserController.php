@@ -31,7 +31,7 @@ class UserController extends Controller {
     {
         $this->userRepository->findById($id)->delete();
 
-        Flash::info('User deleted');
+        app()->make('flash')->info('User deleted');
 
         return redirect()->back();
     }
