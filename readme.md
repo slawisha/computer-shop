@@ -11,7 +11,7 @@ Excel spreadsheet has following columns: id, Name, Manufacturer, Model, Category
 use testing card: 4242 4242 4242 4242, Expiry date: some date in future. CVC: 4242.
 
 ## Local Instalation
-Clone the repo and cd into the directory, then run composer install form the command line. The App uses sqlite in development enviroment.
+Clone the repo and cd into the directory, then run composer install form the command line. Rename .env.example to .env .The App uses sqlite in development enviroment.
 Run inside homestead enviroment.
 
 Admin credentials
